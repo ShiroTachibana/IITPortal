@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<title>IIT Billing</title>
+<link rel="shorcut icon" type="x-icon" href="./images/schoologo.webp"> 
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="aweb.css">
+<link rel="stylesheet" href="homepage.css">
+<head>
+ 
+    <img src="./images/schoologo.webp" height="240px" width="250px" style="position: absolute; left: 80px; top: 40px">
+    <p style="font-family: Arial; font-size: 50px; position: absolute; left: 400px; top: 100px">Intellisense Institute of Technology<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Students' Account Portal</p>
+    </div>
+ </div>
+</head>
+<div style="color: #555; position: absolute; left: 155px; top: 320px;">
+    <a href="./homepage.html" style="text-decoration: none; color: #333; font-size: 50px;">Home</a><br>
+    <br>
+    <br>
+    <br>
+    <a href="./about school.html" style="text-decoration: none; color: #333; font-size: 50px;">About</a>
+ </div>
+ <div class="login-box" style=" height: 700px; width: 400px; right: 100px;">
+    <h1>Register</h1> <br>
+    <form onsubmit ="return validateForm()">   
+        <td> Full Name </td><br> 
+        <input class="regi" type = "text" id = "fname" value = "" placeholder="Full name here...">   
+        <span id = "blankMsg" style="color:red"> </span> <br><br>  
+          
+
+        <td> Username </td><br>  
+        <input class="regi" type = "text" id = "lname" value = "" placeholder="Username here...">   
+        <span id = "charMsg" style="color:red"> </span> <span id = "blankMsg" style="color:red"> </span> <br><br>  
+        
+          
+
+        <td> Create Password </td> <br>
+        <input class="regi" type = "password" id = "pswd1" value = "" placeholder="Password here...">   
+        <span id = "message1" style="color:red"> </span> <br><br>  
+          
+
+        <td> Confirm Password </td> <br> 
+        <input class="regi" type = "password" id = "pswd2" value = "" placeholder="Confirm password...">   
+        <span id = "message2" style="color:red"> </span> <br><br>  
+
+        <td> Position in the School</td> <br>
+        <input class="pos" type = "text" id = "spos" value = "" placeholder="Position here...">
+        <span id = "posmessage" style="color: red"> </span> <br> <br>
+          
+        <td> ID Number </td> <br>
+        <input class="idnum" type = "text" id = "id" value = "" placeholder="ID Number here...">
+        <span id = "idmessage" style="color: red"> </span> <br> <br>
+
+        <input type = "submit" value = "Submit">  
+          
+
+        <button type = "reset" value = "Reset" >Reset</button> 
+        
+        </form>  
+</div>
+</head>
+<script src="main.js"></script> 

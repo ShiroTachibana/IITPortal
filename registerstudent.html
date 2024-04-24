@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<title>IIT Billing Login</title>
+<link rel="shorcut icon" type="x-icon" href="./images/schoologo.webp"> 
+<link rel="stylesheet" href="main.css">
+<head>
+    <div class="login-box" style=" height: 450px; width: 400px; right: 450px;">
+        <h1>Register</h1>
+        <form onsubmit ="return validateForm()">   
+            <td> Full Name </td><br> 
+            <input class="regi" type = "text" id = "fname" value = "" placeholder="Full name here...">   
+            <span id = "blankMsg" style="color:red"> </span> <br><br>  
+              
+
+            <td> Username </td><br>  
+            <input class="regi" type = "text" id = "lname" value = "" placeholder="Username here...">   
+            <span id = "charMsg" style="color:red"> </span> <span id = "blankMsg" style="color:red"> </span> <br><br>  
+            
+              
+
+            <td> Create Password </td> <br>
+            <input class="regi" type = "password" id = "pswd1" value = "" placeholder="Password here...">   
+            <span id = "message1" style="color:red"> </span> <br><br>  
+              
+
+            <td> Confirm Password </td> <br> 
+            <input class="regi" type = "password" id = "pswd2" value = "" placeholder="Confirm password...">   
+            <span id = "message2" style="color:red"> </span> <br><br>  
+              
+
+            <input type = "submit" value = "Submit">  
+              
+
+            <button type = "reset" value = "Reset" >Reset</button> 
+            <br>
+            <br>
+            Already have an account? <a href="./login.html">Return to Login</a>
+            </form>  
+    </div>
+</head>
+<script src="main.js"></script> 
