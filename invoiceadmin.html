@@ -2,21 +2,49 @@
 <title>IIT Billing</title>
 <link rel="shorcut icon" type="x-icon" href="./images/schoologo.webp"> 
 <link rel="stylesheet" href="main.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-<head>
+<div class="sidenav">
+    <div class="topnav">
+        <input style="border: medium;
+        border-color: #35e64d;
+        border-radius: 20px; font-size: 20px;" type="searchInput" placeholder="Search student name">
+      </div>
+    <button type="button" class="collapsible">Grade 11</button>
+<div class="content">
+  <p><a style="border: solid;
+    border-width: 1px;" href="">Integrity</a>
+<a style="border: solid;
+border-width: 1px;" href="">Innovative</a>
+<a style="border: solid;
+border-width: 1px;" href="">Inventive</a>
+<a style="border: solid;
+border-width: 1px;" href="">Industrious</a>
+  </div>
+<br>
+<br>
+<button type="button" class="collapsible">Grade 12</button>
+<div class="content">
+    <p>
+    <a style="border: solid;
+    border-width: 1px;" href="">Trustworthy</a>
+    <a style="border: solid;
+    border-width: 1px;" href="">Trust-team</a>
+    </p>
+    </div>
+    <br>
+
+    <a href="./homepage.html">Return to Homepage</a>
+    <br>
+    <a href="./about school.html">About School</a>
+    <br>
+    <a href="./about website.html">About Website</a>
+</div>
 
 </p>
   <div class="main">
-
+    ...
   </div>
   <body>
-    <div class="canvas_div_pdf">
-        <button onclick="getPDF()" id="downloadbtn">
-            <b>Click to download as PDF File</b>
-        </button>
-        <div class="invoice-box">
+    <div class="invoice-box">
         <table cellpadding="0" cellspacing="0">
             <tr class="top">
                 <td colspan="2">
@@ -87,40 +115,6 @@
             </tr>
         </table>
     </div>
-</div>
 </body>
-  <script src="main.js">
-    function getPDF(){
-
-var HTML_Width = $(".canvas_div_pdf").width();
-var HTML_Height = $(".canvas_div_pdf").height();
-var top_left_margin = 15;
-var PDF_Width = HTML_Width+(top_left_margin*2);
-var PDF_Height = (PDF_Width*1.5)+(top_left_margin*2);
-var canvas_image_width = HTML_Width;
-var canvas_image_height = HTML_Height;
-
-var totalPDFPages = Math.ceil(HTML_Height/PDF_Height)-1;
-
-
-html2canvas($(".canvas_div_pdf")[0],{allowTaint:true}).then(function(canvas) {
-  canvas.getContext('2d');
-  
-  console.log(canvas.height+"  "+canvas.width);
-  
-  
-  var imgData = canvas.toDataURL("image/jpeg", 1.0);
-  var pdf = new jsPDF('p', 'pt',  [PDF_Width, PDF_Height]);
-    pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin,canvas_image_width,canvas_image_height);
-  
-  
-  for (var i = 1; i <= totalPDFPages; i++) { 
-    pdf.addPage(PDF_Width, PDF_Height);
-    pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height*i)+(top_left_margin*4),canvas_image_width,canvas_image_height);
-  }
-  
-    pdf.save("HTML-Document.pdf");
-    });
-};
-  </script>
+  <script src="main.js"></script>
   </html>
